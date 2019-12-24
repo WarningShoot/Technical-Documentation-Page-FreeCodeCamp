@@ -8,7 +8,7 @@
 
 /* NAVBAR */
 
-nav#navbar
+#navbar
 {
     min-width: 300px;
     position: fixed;
@@ -19,7 +19,7 @@ nav#navbar
     background-color: rgba(196, 207, 203, 1);
 }
 
-nav#navbar > header
+#navbar > header
 {
     text-align: center;
     font-size: 30px;
@@ -27,12 +27,12 @@ nav#navbar > header
     margin-top: 20px;
 }
 
-nav#navbar > ul
+#navbar > ul
 {
     list-style: none;
 }
 
-nav#navbar > ul > li
+#navbar > ul > li
 {
 
     border-top: black solid 1px;
@@ -42,7 +42,7 @@ nav#navbar > ul > li
     font-size: 17px;
 }
 
-nav#navbar > ul > li > a:link, a:hover, a:visited, a:active
+#navbar > ul > li > a:link, a:hover, a:visited, a:active
 {
     color: black;
     text-decoration: none;
@@ -52,39 +52,84 @@ nav#navbar > ul > li > a:link, a:hover, a:visited, a:active
 
 /* MAIN-DOC */
 
-main#main-doc
+#main-doc
 {
     position: absolute;
     margin-left: 300px;
-    padding: 20px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     background-color: rgba(196, 207, 203, 1);
-    height: 100%;
 }
 
-main#main-doc > section > article > p
+#main-doc > section > article
 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    line-height: 25px;
 }
 
-main#main-doc > section > article > ul
+#main-doc > section > article > p
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#main-doc > section > article > ul
 {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 40px;
 }
 
-main#main-doc > section > article > ul > li
+#main-doc > section > article > ul > li
 {
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-main#main-doc > section > header
+#main-doc > section > header
 {
     font-size: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
+#main-doc > section > article > code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
 /* MAIN-DOC */
+
+@media only screen and (max-width: 815px)
+{
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 300px;
+        border: none;
+        z-index: 1;
+        background-color: rgba(196, 207, 203, 1);
+    }
+
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+        overflow-y: auto;
+    }
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 300px;
+    }
+}
